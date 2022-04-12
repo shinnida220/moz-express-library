@@ -1,8 +1,12 @@
 #! /usr/bin/env node
+
+require('dotenv').config();
+
 /**
  * Source from
  * https://raw.githubusercontent.com/hamishwillee/express-locallibrary-tutorial/master/populatedb.js
  */
+
 
 console.log('This script populates some test books, authors, genres and bookinstances to your database. Specified database as argument - e.g.: populatedb mongodb+srv://cooluser:coolpassword@cluster0.a9azn.mongodb.net/local_library?retryWrites=true');
 
@@ -230,4 +234,4 @@ async.series([
     mongoose.connection.close();
   });
 
-// node populate 'mongodb+srv://ni-fcc-user-01:DYLSCZOPMGmkfOaq@moongoosecluster0.8otmw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+// node populate 'mongo-db-server-uri'
